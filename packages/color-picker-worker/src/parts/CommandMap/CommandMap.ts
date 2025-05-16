@@ -4,9 +4,11 @@ import * as Diff2 from '../Diff2/Diff2.ts'
 import * as GetCommandIds from '../GetCommandIds/GetCommandIds.ts'
 import { handleSliderPointerDown } from '../HandleSliderPointerDown/HandleSliderPointerDown.ts'
 import { handleSliderPointerMove } from '../HandleSliderPointerMove/HandleSliderPointerMove.ts'
+import * as Terminate from '../Terminate/Terminate.ts'
 
 export const commandMap = {
   'ColorPicker.create': Create.create,
+  'ColorPicker.terminate': Terminate.terminate,
   'ColorPicker.getCommandIds': GetCommandIds.getCommandIds,
   'ColorPicker.handleSliderPointerDown': handleSliderPointerDown,
   'ColorPicker.handleSliderPointerMove': handleSliderPointerMove,
