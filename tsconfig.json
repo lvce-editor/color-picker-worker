@@ -3,7 +3,7 @@
   "include": [],
   "references": [
     {
-      "path": "./packages/iframe-worker"
+      "path": "./packages/color-picker-worker"
     },
     {
       "path": "./packages/build"
