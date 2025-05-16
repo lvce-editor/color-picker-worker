@@ -9,11 +9,11 @@ import * as Terminate from '../Terminate/Terminate.ts'
 
 export const commandMap = {
   'ColorPicker.create': Create.create,
-  'ColorPicker.terminate': Terminate.terminate,
+  'ColorPicker.diff2': Diff2.diff2,
   'ColorPicker.getCommandIds': GetCommandIds.getCommandIds,
   'ColorPicker.handleSliderPointerDown': handleSliderPointerDown,
   'ColorPicker.handleSliderPointerMove': handleSliderPointerMove,
   'ColorPicker.loadContent': ColorPicker.loadContent,
-  'ColorPicker.diff2': Diff2.diff2,
   'ColorPicker.render2': Render2.render2,
+  'ColorPicker.terminate': Terminate.terminate,
 }
