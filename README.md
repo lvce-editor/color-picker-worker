@@ -1,2 +1,3 @@
-# color-picker-worker
-WebWorker for the color picker functionality in Lvce Editor
+# Color picker worker
+
+Web Worker to manage the color picker in Lvce Editor.
