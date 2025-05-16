@@ -1,7 +1,7 @@
 import type { ColorPickerState } from '../ColorPickerState/ColorPickerState.ts'
 import * as Clamp from '../Clamp/Clamp.ts'
 
-const getNewColor = (x: number, max: number) => {
+const getNewColor = (x: number, max: number): string => {
   const percent = x / max
   const hue = percent * 360
   const newColor = `hsl(${hue}, 100%, 50%)`
