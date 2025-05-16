@@ -1,1 +1,1 @@
-export const commandIds = ['clearSearchResults', 'collapseAll', 'collapseDetails', 'viewAsTree']
+export const commandIds = ['handleSliderPointerDown', 'handleSliderPointerMove']
