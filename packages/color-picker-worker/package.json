@@ -2,7 +2,6 @@
   "name": "@lvce-editor/color-picker-worker",
   "version": "0.0.0-dev",
   "description": "Web Worker for the color picker in Lvce Editor",
-  "keywords": [],
   "repository": {
     "type": "git",
     "url": "git@github.com:lvce-editor/color-picker-worker.git"
