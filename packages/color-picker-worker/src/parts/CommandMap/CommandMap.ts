@@ -14,7 +14,7 @@ export const commandMap = {
   'ColorPicker.getCommandIds': GetCommandIds.getCommandIds,
   'ColorPicker.handleSliderPointerDown': WrapCommand.wrapCommand(handleSliderPointerDown),
   'ColorPicker.handleSliderPointerMove': WrapCommand.wrapCommand(handleSliderPointerMove),
-  'ColorPicker.loadContent': ColorPicker.loadContent,
+  'ColorPicker.loadContent': WrapCommand.wrapCommand(ColorPicker.loadContent),
   'ColorPicker.render2': Render2.render2,
   'ColorPicker.terminate': Terminate.terminate,
 }
