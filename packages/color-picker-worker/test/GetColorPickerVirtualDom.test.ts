@@ -34,6 +34,8 @@ test('getColorPickerVirtualDom', () => {
     {
       type: VirtualDomElements.Div,
       className: 'ColorPickerSlider',
+      onPointerDown: 'handleSliderPointerDown',
+      onPointerMove: 'handleSliderPointerMove',
       childCount: 0,
     },
     {
