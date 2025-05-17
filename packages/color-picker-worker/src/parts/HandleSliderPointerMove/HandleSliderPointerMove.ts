@@ -6,6 +6,7 @@ export const handleSliderPointerMove = (state: ColorPickerState, x: number, y: n
   const { min, max } = state
   const newX = Clamp.clamp(x, min, max)
   const newColor = getNewColor(newX, max)
+  console.log('pointer move')
   return {
     ...state,
     color: newColor,
