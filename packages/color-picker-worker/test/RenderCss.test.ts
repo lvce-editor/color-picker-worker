@@ -1,7 +1,7 @@
 import { test, expect } from '@jest/globals'
 import { createDefaultState } from '../src/parts/ColorPickerState/ColorPickerState.ts'
 import { renderCss } from '../src/parts/RenderCss/RenderCss.ts'
-import { RenderMethod } from '../src/parts/RenderMethod/RenderMethod.ts'
+import * as RenderMethod from '../src/parts/RenderMethod/RenderMethod.ts'
 
 test('renderCss - basic', () => {
   const oldState = createDefaultState()
