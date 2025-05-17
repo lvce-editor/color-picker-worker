@@ -5,3 +5,6 @@ export const RenderReplaceValue = 4
 export const RenderIncludeValue = 5
 export const RenderExcludeValue = 6
 export const RenderFocusContext = 7
+export const RenderBounds = 8
+export const RenderColor = 9
+export const RenderOffsetX = 10
