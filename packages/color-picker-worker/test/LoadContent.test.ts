@@ -1,7 +1,5 @@
-import { test, expect } from '@jest/globals'
+import { expect, test } from '@jest/globals'
 import { createDefaultState } from '../src/parts/ColorPickerState/ColorPickerState.ts'
-import { getBounds } from '../src/parts/GetBounds/GetBounds.ts'
-import { getNewColor } from '../src/parts/GetNewColor/GetNewColor.ts'
 import { loadContent } from '../src/parts/LoadContent/LoadContent.ts'
 
 test('loadContent - basic', () => {
