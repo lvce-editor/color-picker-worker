@@ -1,5 +1,5 @@
 import type { ColorPickerState } from '../ColorPickerState/ColorPickerState.ts'
 
 export const isEqual = (oldState: ColorPickerState, newState: ColorPickerState): boolean => {
-  return oldState.offsetX === newState.offsetX
+  return oldState.offsetX === newState.offsetX && oldState.color === newState.color
 }
