@@ -16,5 +16,6 @@ export const loadContent = (state: ColorPickerState): ColorPickerState => {
     y,
     width,
     height,
+    version: 1,
   }
 }

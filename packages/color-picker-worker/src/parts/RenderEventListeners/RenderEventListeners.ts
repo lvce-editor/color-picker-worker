@@ -1,15 +1,7 @@
-import type { DomEventListener } from '../DomEventListener/DomEventListener.ts'
-import * as DomEventListenerFunctions from '../DomEventListenerFunctions/DomEventListenerFunctions.ts'
+import { getEventListeners } from '../GetEventListeners/GetEventListeners.ts'
+import * as RenderMethod from '../RenderMethod/RenderMethod.ts'
 
-export const renderEventListeners = (): readonly DomEventListener[] => {
-  return [
-    {
-      name: DomEventListenerFunctions.HandleSliderPointerDown,
-      params: ['handleSliderPointerDown', 'event.clientX', 'event.clientY'],
-    },
-    {
-      name: DomEventListenerFunctions.HandleSliderPointerMove,
-      params: ['handleSliderPointerMove', 'event.clientX', 'event.clientY'],
-    },
-  ]
+export const renderEventListeners = (): readonly any[] => {
+  const eventListeners = getEventListeners()
+  return [RenderMethod.SetEventListeners, eventListeners]
 }

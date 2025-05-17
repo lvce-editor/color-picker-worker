@@ -2,6 +2,7 @@ import type { Renderer } from '../Renderer/Renderer.ts'
 import * as DiffType from '../DiffType/DiffType.ts'
 import * as RenderBounds from '../RenderBounds/RenderBounds.ts'
 import * as RenderCss from '../RenderCss/RenderCss.ts'
+import * as RenderEventListeners from '../RenderEventListeners/RenderEventListeners.ts'
 import * as RenderItems from '../RenderItems/RenderItems.ts'
 
 export const getRenderer = (diffType: number): Renderer => {
@@ -12,6 +13,8 @@ export const getRenderer = (diffType: number): Renderer => {
       return RenderBounds.renderBounds
     case DiffType.RenderCss:
       return RenderCss.renderCss
+    case DiffType.RenderEventListeners:
+      return RenderEventListeners.renderEventListeners
     default:
       throw new Error('unknown renderer')
   }

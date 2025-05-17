@@ -12,6 +12,7 @@ export const create = (uid: number, x: number, y: number, width: number, height:
     width,
     x,
     y,
+    version: 0,
   }
   SearchViewStates.set(uid, state, state)
   return state
