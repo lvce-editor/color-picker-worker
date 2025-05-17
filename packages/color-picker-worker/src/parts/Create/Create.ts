@@ -9,7 +9,7 @@ export const create = (uid: number, x: number, y: number, width: number, height:
     max: 0,
     min: 0,
     offsetX: 0,
-    width: 0,
+    width,
     x,
     y,
   }
