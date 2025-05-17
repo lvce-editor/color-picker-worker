@@ -12,5 +12,6 @@ export const createDefaultState = (): ColorPickerState => {
     min: 0,
     uid: 0,
     version: 0,
+    parentUid: 0,
   }
 }

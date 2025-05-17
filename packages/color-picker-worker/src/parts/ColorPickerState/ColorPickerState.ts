@@ -7,4 +7,5 @@ export interface ColorPickerState extends Rectangle {
   readonly uid: number
   readonly min: number
   readonly version: number
+  readonly parentUid: number
 }
