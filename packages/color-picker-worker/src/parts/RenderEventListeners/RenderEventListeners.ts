@@ -1,4 +1,4 @@
-import { ColorPickerState } from '../ColorPickerState/ColorPickerState.ts'
+import type { ColorPickerState } from '../ColorPickerState/ColorPickerState.ts'
 import { getEventListeners } from '../GetEventListeners/GetEventListeners.ts'
 import * as RenderMethod from '../RenderMethod/RenderMethod.ts'
 
