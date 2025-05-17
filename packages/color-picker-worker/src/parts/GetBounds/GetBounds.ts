@@ -5,6 +5,6 @@ export const getBounds = (): Bounds => {
     x: 20,
     y: 20,
     width: 300,
-    height: 240,
+    height: 200,
   }
 }
