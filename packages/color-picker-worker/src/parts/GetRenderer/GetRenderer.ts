@@ -1,7 +1,7 @@
+import type { Renderer } from '../Renderer/Renderer.ts'
 import * as DiffType from '../DiffType/DiffType.ts'
 import * as RenderBounds from '../RenderBounds/RenderBounds.ts'
 import * as RenderCss from '../RenderCss/RenderCss.ts'
-import type { Renderer } from '../Renderer/Renderer.ts'
 import * as RenderItems from '../RenderItems/RenderItems.ts'
 
 export const getRenderer = (diffType: number): Renderer => {
