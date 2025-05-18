@@ -1,5 +1,5 @@
 import { test, expect } from '@jest/globals'
-import { createDefaultState } from '../src/parts/ColorPickerState/ColorPickerState.ts'
+import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
 import { renderItems } from '../src/parts/RenderItems/RenderItems.ts'
 import * as RenderMethod from '../src/parts/RenderMethod/RenderMethod.ts'
 
