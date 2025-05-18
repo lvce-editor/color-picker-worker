@@ -1,5 +1,5 @@
 import { test, expect } from '@jest/globals'
-import { createDefaultState } from '../src/parts/ColorPickerState/ColorPickerState.ts'
+import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
 import { handleSliderPointerDown } from '../src/parts/HandleSliderPointerDown/HandleSliderPointerDown.ts'
 
 test('handleSliderPointerDown - within bounds', () => {

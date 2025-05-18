@@ -9,17 +9,3 @@ export interface ColorPickerState extends Rectangle {
   readonly version: number
   readonly parentUid: number
 }
-
-export const createDefaultState = (): ColorPickerState => ({
-  color: '#000000',
-  offsetX: 0,
-  max: 255,
-  min: 0,
-  uid: 1,
-  version: 1,
-  parentUid: 0,
-  x: 0,
-  y: 0,
-  width: 255,
-  height: 20,
-})
