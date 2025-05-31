@@ -1,2 +1,2 @@
-export const HandleSliderPointerDown = 'handleSliderPointerDown'
-export const HandleSliderPointerMove = 'handleSliderPointerMove'
+export const HandleSliderPointerDown = 1
+export const HandleSliderPointerMove = 2
