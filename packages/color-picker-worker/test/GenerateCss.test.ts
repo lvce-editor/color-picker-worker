@@ -2,16 +2,22 @@ import { test, expect } from '@jest/globals'
 import { generateCss } from '../src/parts/GenerateCss/GenerateCss.ts'
 
 test('generateCss', () => {
-  const result = generateCss(100, '#ff0000')
+  const offsetX: number = 100
+  const color: string = '#ff0000'
+  const result: string = generateCss(offsetX, color)
   expect(result).toBe(':root { --ColorPickerOffsetX: 100px;\n--ColorPickerColor: #ff0000; }')
 })
 
 test('generateCss with zero offset', () => {
-  const result = generateCss(0, '#000000')
+  const offsetX: number = 0
+  const color: string = '#000000'
+  const result: string = generateCss(offsetX, color)
   expect(result).toBe(':root { --ColorPickerOffsetX: 0px;\n--ColorPickerColor: #000000; }')
 })
 
 test('generateCss with rgb color', () => {
-  const result = generateCss(50, 'rgb(255, 0, 0)')
+  const offsetX: number = 50
+  const color: string = 'rgb(255, 0, 0)'
+  const result: string = generateCss(offsetX, color)
   expect(result).toBe(':root { --ColorPickerOffsetX: 50px;\n--ColorPickerColor: rgb(255, 0, 0); }')
 })

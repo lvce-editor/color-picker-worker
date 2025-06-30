@@ -2,6 +2,6 @@ import { test, expect } from '@jest/globals'
 import { getCommandIds } from '../src/parts/GetCommandIds/GetCommandIds.ts'
 
 test('getCommandIds', () => {
-  const result = getCommandIds()
+  const result: readonly string[] = getCommandIds()
   expect(result).toEqual(['handleSliderPointerDown', 'handleSliderPointerMove'])
 })
