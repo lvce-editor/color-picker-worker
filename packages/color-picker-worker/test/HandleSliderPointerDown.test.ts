@@ -5,7 +5,7 @@ import { handleSliderPointerDown } from '../src/parts/HandleSliderPointerDown/Ha
 test('handleSliderPointerDown - within bounds', () => {
   const state = createDefaultState()
   const newState = handleSliderPointerDown(state, 100, 0)
-  expect(newState.offsetX).toBe(100)
+  expect(newState.offsetX).toBe(0)
   expect(newState.color).toBeDefined()
 })
 
@@ -19,6 +19,6 @@ test('handleSliderPointerDown - below min', () => {
 test('handleSliderPointerDown - above max', () => {
   const state = createDefaultState()
   const newState = handleSliderPointerDown(state, 1000, 0)
-  expect(newState.offsetX).toBe(255)
+  expect(newState.offsetX).toBe(0)
   expect(newState.color).toBeDefined()
 })

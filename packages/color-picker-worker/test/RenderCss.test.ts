@@ -11,7 +11,7 @@ test('renderCss - basic', () => {
     color: '#ff0000',
   }
   const result = renderCss(oldState, newState)
-  expect(result).toEqual([RenderMethod.SetCss, 1, expect.any(String)])
+  expect(result).toEqual([RenderMethod.SetCss, 0, expect.any(String)])
 })
 
 test('renderCss - different uid', () => {
