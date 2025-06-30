@@ -1,6 +1,6 @@
 import { test, expect } from '@jest/globals'
-import { isEqual } from '../src/parts/DiffColor/DiffColor.js'
 import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
+import { isEqual } from '../src/parts/DiffColor/DiffColor.js'
 
 test('isEqual returns true when states are equal', () => {
   const oldState = createDefaultState()
