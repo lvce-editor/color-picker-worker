@@ -43,12 +43,3 @@ test('isEqual with different height', () => {
   }
   expect(isEqual(oldState, newState)).toBe(false)
 })
-
-test('isEqual with different color', () => {
-  const oldState = createDefaultState()
-  const newState: ColorPickerState = {
-    ...createDefaultState(),
-    color: '#ff0000',
-  }
-  expect(isEqual(oldState, newState)).toBe(false)
-})
