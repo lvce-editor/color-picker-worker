@@ -8,30 +8,36 @@ import * as RenderItems from '../src/parts/RenderItems/RenderItems.ts'
 import * as RenderUid from '../src/parts/RenderUid/RenderUid.ts'
 
 test('getRenderer with RenderItems', () => {
-  const renderer = getRenderer(DiffType.RenderItems)
+  const diffType: number = DiffType.RenderItems
+  const renderer = getRenderer(diffType)
   expect(renderer).toBe(RenderItems.renderItems)
 })
 
 test('getRenderer with RenderBounds', () => {
-  const renderer = getRenderer(DiffType.RenderBounds)
+  const diffType: number = DiffType.RenderBounds
+  const renderer = getRenderer(diffType)
   expect(renderer).toBe(RenderBounds.renderBounds)
 })
 
 test('getRenderer with RenderCss', () => {
-  const renderer = getRenderer(DiffType.RenderCss)
+  const diffType: number = DiffType.RenderCss
+  const renderer = getRenderer(diffType)
   expect(renderer).toBe(RenderCss.renderCss)
 })
 
 test('getRenderer with RenderEventListeners', () => {
-  const renderer = getRenderer(DiffType.RenderEventListeners)
+  const diffType: number = DiffType.RenderEventListeners
+  const renderer = getRenderer(diffType)
   expect(renderer).toBe(RenderEventListeners.renderEventListeners)
 })
 
 test('getRenderer with RenderUid', () => {
-  const renderer = getRenderer(DiffType.RenderUid)
+  const diffType: number = DiffType.RenderUid
+  const renderer = getRenderer(diffType)
   expect(renderer).toBe(RenderUid.renderUid)
 })
 
 test('getRenderer with unknown type', () => {
-  expect(() => getRenderer(999)).toThrow('unknown renderer')
+  const unknownType: number = 999
+  expect(() => getRenderer(unknownType)).toThrow('unknown renderer')
 })
