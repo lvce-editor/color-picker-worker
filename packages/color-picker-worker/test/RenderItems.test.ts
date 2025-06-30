@@ -1,11 +1,12 @@
 import { test, expect } from '@jest/globals'
+import type { ColorPickerState } from '../src/parts/ColorPickerState/ColorPickerState.ts'
 import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
 import { renderItems } from '../src/parts/RenderItems/RenderItems.ts'
 import * as RenderMethod from '../src/parts/RenderMethod/RenderMethod.ts'
 
 test('renderItems - basic', () => {
-  const oldState = createDefaultState()
-  const newState = {
+  const oldState: ColorPickerState = createDefaultState()
+  const newState: ColorPickerState = {
     ...oldState,
     uid: 1,
   }
@@ -14,8 +15,8 @@ test('renderItems - basic', () => {
 })
 
 test('renderItems - different uid', () => {
-  const oldState = createDefaultState()
-  const newState = {
+  const oldState: ColorPickerState = createDefaultState()
+  const newState: ColorPickerState = {
     ...oldState,
     uid: 2,
   }
