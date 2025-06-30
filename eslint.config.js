@@ -5,4 +5,9 @@ export default [
   {
     ignores: ['**/server/**', '**/e2e/**', '**/memory/**'],
   },
+  {
+    rules:{
+      'jest/no-restricted-jest-methods':'off'
+    }
+  }
 ]

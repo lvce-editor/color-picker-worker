@@ -8,7 +8,6 @@ test('getColorPickerVirtualDom', () => {
     {
       type: VirtualDomElements.Div,
       className: 'Viewlet ColorPicker',
-      onPointerDown: 'handlePointerDown',
       childCount: 3,
     },
     {
@@ -34,6 +33,8 @@ test('getColorPickerVirtualDom', () => {
     {
       type: VirtualDomElements.Div,
       className: 'ColorPickerSlider',
+      onPointerDown: 1,
+      onPointerMove: 2,
       childCount: 0,
     },
     {
