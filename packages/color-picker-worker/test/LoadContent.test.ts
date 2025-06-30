@@ -1,11 +1,11 @@
 import { expect, test } from '@jest/globals'
 import type { ColorPickerState } from '../src/parts/ColorPickerState/ColorPickerState.ts'
-import { createDefaultState } from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
-import { loadContent } from '../src/parts/LoadContent/LoadContent.ts'
+import * as CreateDefaultState from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
+import * as LoadContent from '../src/parts/LoadContent/LoadContent.ts'
 
 test('loadContent - basic', () => {
-  const state: ColorPickerState = createDefaultState()
-  const result: ColorPickerState = loadContent(state)
+  const state: ColorPickerState = CreateDefaultState.createDefaultState()
+  const result: ColorPickerState = LoadContent.loadContent(state)
   expect(result.offsetX).toBe(20)
   expect(result.max).toBe(300)
   expect(result.color).toBeDefined()

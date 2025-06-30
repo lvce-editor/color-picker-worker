@@ -1,5 +1,5 @@
 import type { ColorPickerState } from '../ColorPickerState/ColorPickerState.ts'
-import * as SearchViewStates from '../ColorPickerStates/ColorPickerStates.ts'
+import * as ColorPickerStates from '../ColorPickerStates/ColorPickerStates.ts'
 
 export const create = (uid: number, x: number, y: number, width: number, height: number, parentUid: number): ColorPickerState => {
   const state: ColorPickerState = {
@@ -15,6 +15,6 @@ export const create = (uid: number, x: number, y: number, width: number, height:
     version: 0,
     parentUid,
   }
-  SearchViewStates.set(uid, state, state)
+  ColorPickerStates.set(uid, state, state)
   return state
 }
