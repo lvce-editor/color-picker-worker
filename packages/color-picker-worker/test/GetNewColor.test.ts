@@ -2,21 +2,29 @@ import { test, expect } from '@jest/globals'
 import { getNewColor } from '../src/parts/GetNewColor/GetNewColor.ts'
 
 test('getNewColor at start', () => {
-  const result = getNewColor(0, 100)
+  const offsetX: number = 0
+  const max: number = 100
+  const result: string = getNewColor(offsetX, max)
   expect(result).toBe('hsl(0, 100%, 50%)')
 })
 
 test('getNewColor at middle', () => {
-  const result = getNewColor(50, 100)
+  const offsetX: number = 50
+  const max: number = 100
+  const result: string = getNewColor(offsetX, max)
   expect(result).toBe('hsl(180, 100%, 50%)')
 })
 
 test('getNewColor at end', () => {
-  const result = getNewColor(100, 100)
+  const offsetX: number = 100
+  const max: number = 100
+  const result: string = getNewColor(offsetX, max)
   expect(result).toBe('hsl(360, 100%, 50%)')
 })
 
 test('getNewColor with different max', () => {
-  const result = getNewColor(50, 200)
+  const offsetX: number = 50
+  const max: number = 200
+  const result: string = getNewColor(offsetX, max)
   expect(result).toBe('hsl(90, 100%, 50%)')
 })
