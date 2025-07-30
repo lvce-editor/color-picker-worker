@@ -9,4 +9,5 @@ export interface ColorPickerState extends Rectangle {
   readonly version: number
   readonly parentUid: number
   readonly isPointerDown: boolean
+  readonly sliderThumbRadius: number
 }

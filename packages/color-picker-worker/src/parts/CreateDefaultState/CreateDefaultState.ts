@@ -14,5 +14,6 @@ export const createDefaultState = (): ColorPickerState => {
     version: 0,
     parentUid: 0,
     isPointerDown: false,
+    sliderThumbRadius: 12,
   }
 }

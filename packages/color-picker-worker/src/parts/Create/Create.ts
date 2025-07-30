@@ -15,6 +15,7 @@ export const create = (uid: number, x: number, y: number, width: number, height:
     version: 0,
     parentUid,
     isPointerDown: false,
+    sliderThumbRadius: 0,
   }
   ColorPickerStates.set(uid, state, state)
   return state
