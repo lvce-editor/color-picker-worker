@@ -4,7 +4,11 @@ import * as CreateDefaultState from '../src/parts/CreateDefaultState/CreateDefau
 import * as HandleSliderPointerDown from '../src/parts/HandleSliderPointerDown/HandleSliderPointerDown.ts'
 
 test('handleSliderPointerDown - within bounds', () => {
-  const state: ColorPickerState = CreateDefaultState.createDefaultState()
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    min: 0,
+    max: 100,
+  }
   const clientX: number = 100
   const offsetLeft: number = 0
   const newState: ColorPickerState = HandleSliderPointerDown.handleSliderPointerDown(state, clientX, offsetLeft)
@@ -13,7 +17,11 @@ test('handleSliderPointerDown - within bounds', () => {
 })
 
 test('handleSliderPointerDown - below min', () => {
-  const state: ColorPickerState = CreateDefaultState.createDefaultState()
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    min: 0,
+    max: 100,
+  }
   const clientX: number = -100
   const offsetLeft: number = 0
   const newState: ColorPickerState = HandleSliderPointerDown.handleSliderPointerDown(state, clientX, offsetLeft)
@@ -22,10 +30,14 @@ test('handleSliderPointerDown - below min', () => {
 })
 
 test('handleSliderPointerDown - above max', () => {
-  const state: ColorPickerState = CreateDefaultState.createDefaultState()
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    min: 0,
+    max: 100,
+  }
   const clientX: number = 1000
   const offsetLeft: number = 0
   const newState: ColorPickerState = HandleSliderPointerDown.handleSliderPointerDown(state, clientX, offsetLeft)
-  expect(newState.offsetX).toBe(-12)
+  expect(newState.offsetX).toBe(88)
   expect(newState.color).toBeDefined()
 })
