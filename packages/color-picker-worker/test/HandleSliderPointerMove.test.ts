@@ -4,7 +4,12 @@ import * as CreateDefaultState from '../src/parts/CreateDefaultState/CreateDefau
 import * as HandleSliderPointerMove from '../src/parts/HandleSliderPointerMove/HandleSliderPointerMove.ts'
 
 test('pointer move at start', () => {
-  const state: ColorPickerState = { ...CreateDefaultState.createDefaultState(), min: 0, max: 100 }
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    isPointerDown: true,
+    min: 0,
+    max: 100,
+  }
   const clientX: number = 0
   const offsetLeft: number = 0
   const result: ColorPickerState = HandleSliderPointerMove.handleSliderPointerMove(state, clientX, offsetLeft)
@@ -13,7 +18,12 @@ test('pointer move at start', () => {
 })
 
 test('pointer move at middle', () => {
-  const state: ColorPickerState = { ...CreateDefaultState.createDefaultState(), min: 0, max: 100 }
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    isPointerDown: true,
+    min: 0,
+    max: 100,
+  }
   const clientX: number = 50
   const offsetLeft: number = 0
   const result: ColorPickerState = HandleSliderPointerMove.handleSliderPointerMove(state, clientX, offsetLeft)
@@ -22,7 +32,12 @@ test('pointer move at middle', () => {
 })
 
 test('pointer move at end', () => {
-  const state: ColorPickerState = { ...CreateDefaultState.createDefaultState(), min: 0, max: 100 }
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    isPointerDown: true,
+    min: 0,
+    max: 100,
+  }
   const clientX: number = 100
   const offsetLeft: number = 0
   const result: ColorPickerState = HandleSliderPointerMove.handleSliderPointerMove(state, clientX, offsetLeft)
@@ -31,7 +46,12 @@ test('pointer move at end', () => {
 })
 
 test('pointer move below min clamps to min', () => {
-  const state: ColorPickerState = { ...CreateDefaultState.createDefaultState(), min: 0, max: 100 }
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    isPointerDown: true,
+    min: 0,
+    max: 100,
+  }
   const clientX: number = -10
   const offsetLeft: number = 0
   const result: ColorPickerState = HandleSliderPointerMove.handleSliderPointerMove(state, clientX, offsetLeft)
@@ -40,7 +60,12 @@ test('pointer move below min clamps to min', () => {
 })
 
 test('pointer move above max clamps to max', () => {
-  const state: ColorPickerState = { ...CreateDefaultState.createDefaultState(), min: 0, max: 100 }
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    isPointerDown: true,
+    min: 0,
+    max: 100,
+  }
   const clientX: number = 200
   const offsetLeft: number = 0
   const result: ColorPickerState = HandleSliderPointerMove.handleSliderPointerMove(state, clientX, offsetLeft)
