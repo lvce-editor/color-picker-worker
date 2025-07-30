@@ -1,6 +1,6 @@
 import type { Test } from '@lvce-editor/test-with-playwright'
 
-export const name = 'search.focus'
+export const name = 'color-picker.show'
 
 export const skip = true
 
