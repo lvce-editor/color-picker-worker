@@ -4,12 +4,13 @@ import * as GetNewColor from '../GetNewColor/GetNewColor.ts'
 
 export const loadContent = (state: ColorPickerState): ColorPickerState => {
   const max = 300
-  const offsetX = 20
-  const color = GetNewColor.getNewColor(offsetX, max)
+  const initialOffsetX = 20
+  const sliderThumbRadius = 12
+  const color = GetNewColor.getNewColor(initialOffsetX, max)
   const { x, y, width, height } = GetBounds.getBounds()
   return {
     ...state,
-    offsetX: offsetX,
+    offsetX: initialOffsetX,
     color,
     max,
     x,
@@ -17,5 +18,6 @@ export const loadContent = (state: ColorPickerState): ColorPickerState => {
     width,
     height,
     version: 1,
+    sliderThumbRadius,
   }
 }
