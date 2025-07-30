@@ -6,6 +6,7 @@ import * as Dispose from '../Dispose/Dispose.ts'
 import * as GetCommandIds from '../GetCommandIds/GetCommandIds.ts'
 import { handleSliderPointerDown } from '../HandleSliderPointerDown/HandleSliderPointerDown.ts'
 import { handleSliderPointerMove } from '../HandleSliderPointerMove/HandleSliderPointerMove.ts'
+import { handleSliderPointerUp } from '../HandleSliderPointerUp/HandleSliderPointerUp.ts'
 import * as ColorPicker from '../LoadContent/LoadContent.ts'
 import * as Render2 from '../Render2/Render2.ts'
 
@@ -15,6 +16,7 @@ export const commandMap = {
   'ColorPicker.getCommandIds': GetCommandIds.getCommandIds,
   'ColorPicker.handleSliderPointerDown': WrapCommand.wrapCommand(handleSliderPointerDown),
   'ColorPicker.handleSliderPointerMove': WrapCommand.wrapCommand(handleSliderPointerMove),
+  'ColorPicker.handleSliderPointerUp': WrapCommand.wrapCommand(handleSliderPointerUp),
   'ColorPicker.loadContent': WrapCommand.wrapCommand(ColorPicker.loadContent),
   'ColorPicker.render2': Render2.render2,
   'ColorPicker.terminate': terminate,
