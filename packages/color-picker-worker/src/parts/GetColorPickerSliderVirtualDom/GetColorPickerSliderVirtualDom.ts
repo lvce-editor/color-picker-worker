@@ -10,8 +10,6 @@ export const getColorPickerSliderVirtualDom = (): readonly VirtualDomNode[] => {
       className: ClassNames.ColorPickerSlider,
       childCount: 0,
       onPointerDown: DomEventListenerFunctions.HandleSliderPointerDown,
-      onPointerMove: DomEventListenerFunctions.HandleSliderPointerMove,
-      onPointerUp: DomEventListenerFunctions.HandleSliderPointerUp, // TODO maybe use pointercapturelost event instead
     },
   ]
 }
