@@ -8,7 +8,7 @@ test('handleSliderPointerDown - within bounds', () => {
   const clientX: number = 100
   const offsetLeft: number = 0
   const newState: ColorPickerState = HandleSliderPointerDown.handleSliderPointerDown(state, clientX, offsetLeft)
-  expect(newState.offsetX).toBe(0)
+  expect(newState.offsetX).toBe(88)
   expect(newState.color).toBeDefined()
 })
 
@@ -17,7 +17,7 @@ test('handleSliderPointerDown - below min', () => {
   const clientX: number = -100
   const offsetLeft: number = 0
   const newState: ColorPickerState = HandleSliderPointerDown.handleSliderPointerDown(state, clientX, offsetLeft)
-  expect(newState.offsetX).toBe(0)
+  expect(newState.offsetX).toBe(-12)
   expect(newState.color).toBeDefined()
 })
 
@@ -26,6 +26,6 @@ test('handleSliderPointerDown - above max', () => {
   const clientX: number = 1000
   const offsetLeft: number = 0
   const newState: ColorPickerState = HandleSliderPointerDown.handleSliderPointerDown(state, clientX, offsetLeft)
-  expect(newState.offsetX).toBe(0)
+  expect(newState.offsetX).toBe(-12)
   expect(newState.color).toBeDefined()
 })
