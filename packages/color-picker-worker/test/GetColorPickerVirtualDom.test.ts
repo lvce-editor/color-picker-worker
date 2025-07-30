@@ -35,6 +35,7 @@ test('getColorPickerVirtualDom', () => {
       className: 'ColorPickerSlider',
       onPointerDown: 1,
       onPointerMove: 2,
+      onPointerUp: 3,
       childCount: 0,
     },
     {
