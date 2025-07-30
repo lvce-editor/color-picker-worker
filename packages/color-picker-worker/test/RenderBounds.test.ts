@@ -25,10 +25,10 @@ test('renderBounds returns correct array structure', () => {
   expect(result).toHaveLength(6)
   expect(result[0]).toBe(RenderMethod.SetBounds)
   expect(result[1]).toBe(0) // uid
-  expect(result[2]).toBe(15)  // x
-  expect(result[3]).toBe(25)  // y
+  expect(result[2]).toBe(15) // x
+  expect(result[3]).toBe(25) // y
   expect(result[4]).toBe(110) // width
-  expect(result[5]).toBe(60)  // height
+  expect(result[5]).toBe(60) // height
 })
 
 test('renderBounds uses newState bounds values', () => {

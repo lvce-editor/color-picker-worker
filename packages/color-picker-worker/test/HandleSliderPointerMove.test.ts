@@ -72,3 +72,19 @@ test('pointer move above max clamps to max', () => {
   expect(result.offsetX).toBe(100)
   expect(result.color).toBe('hsl(360, 100%, 50%)')
 })
+
+test('returns state unchanged when isPointerDown is false', () => {
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    isPointerDown: false,
+    offsetX: 25,
+    color: 'hsl(90, 100%, 50%)',
+  }
+  const clientX: number = 50
+  const offsetLeft: number = 0
+  const result: ColorPickerState = HandleSliderPointerMove.handleSliderPointerMove(state, clientX, offsetLeft)
+  expect(result).toBe(state)
+  expect(result.isPointerDown).toBe(false)
+  expect(result.offsetX).toBe(25)
+  expect(result.color).toBe('hsl(90, 100%, 50%)')
+})
