@@ -14,6 +14,7 @@ export const create = (uid: number, x: number, y: number, width: number, height:
     y,
     version: 0,
     parentUid,
+    isPointerDown: false,
   }
   ColorPickerStates.set(uid, state, state)
   return state

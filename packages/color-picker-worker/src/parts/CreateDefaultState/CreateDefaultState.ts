@@ -13,5 +13,6 @@ export const createDefaultState = (): ColorPickerState => {
     uid: 0,
     version: 0,
     parentUid: 0,
+    isPointerDown: false,
   }
 }
