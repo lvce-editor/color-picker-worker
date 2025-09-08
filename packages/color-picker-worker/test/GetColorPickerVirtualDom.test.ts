@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals'
+import { VirtualDomElements } from '@lvce-editor/virtual-dom-worker'
 import * as GetColorPickerVirtualDom from '../src/parts/GetColorPickerVirtualDom/GetColorPickerVirtualDom.ts'
-import * as VirtualDomElements from '../src/parts/VirtualDomElements/VirtualDomElements.ts'
 
 test('getColorPickerVirtualDom', () => {
   const dom = GetColorPickerVirtualDom.getColorPickerVirtualDom()

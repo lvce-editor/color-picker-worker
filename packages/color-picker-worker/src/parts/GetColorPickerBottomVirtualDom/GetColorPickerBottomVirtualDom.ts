@@ -1,8 +1,8 @@
 import type { VirtualDomNode } from '@lvce-editor/virtual-dom-worker'
+import { VirtualDomElements } from '@lvce-editor/virtual-dom-worker'
 import * as DomEventListenerFunctions from '../DomEventListenerFunctions/DomEventListenerFunctions.ts'
 import { getColorPickerSliderThumbVirtualDom } from '../GetColorPickerSliderThumbVirtualDom/GetColorPickerSliderThumbVirtualDom.ts'
 import { getColorPickerSliderVirtualDom } from '../GetColorPickerSliderVirtualDom/GetColorPickerSliderVirtualDom.ts'
-import * as VirtualDomElements from '../VirtualDomElements/VirtualDomElements.ts'
 
 export const getColorPickerBottomVirtualDom = (): readonly VirtualDomNode[] => {
   return [
