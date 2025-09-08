@@ -7,12 +7,28 @@ export const getEventListeners = (uid: number, widgetId: number): readonly DomEv
   return [
     {
       name: DomEventListenerFunctions.HandleSliderPointerDown,
-      params: ['executeWidgetCommand', 'ColorPicker', 'ColorPicker.handleSliderPointerDown', uid, widgetId, EventExpression.ClientX, EventExpression.ClientY],
+      params: [
+        'executeWidgetCommand',
+        'ColorPicker',
+        'ColorPicker.handleSliderPointerDown',
+        uid,
+        widgetId,
+        EventExpression.ClientX,
+        EventExpression.ClientY,
+      ],
       trackPointerEvents: [DomEventListenerFunctions.HandleSliderPointerMove, DomEventListenerFunctions.HandleSliderPointerUp],
     },
     {
       name: DomEventListenerFunctions.HandleSliderPointerMove,
-      params: ['executeWidgetCommand', 'ColorPicker', 'ColorPicker.handleSliderPointerMove', uid, widgetId, EventExpression.ClientX, EventExpression.ClientY],
+      params: [
+        'executeWidgetCommand',
+        'ColorPicker',
+        'ColorPicker.handleSliderPointerMove',
+        uid,
+        widgetId,
+        EventExpression.ClientX,
+        EventExpression.ClientY,
+      ],
     },
     {
       name: DomEventListenerFunctions.HandleSliderPointerUp,
