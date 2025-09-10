@@ -3,12 +3,12 @@ import { babel } from '@rollup/plugin-babel'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import { join } from 'path'
 import { rollup } from 'rollup'
-import { root } from './root.js'
+import { root } from './root.ts'
 
 /**
  * @type {import('rollup').RollupOptions}
  */
-const options = {
+const options: import('rollup').RollupOptions = {
   input: join(root, 'packages/color-picker-worker/src/colorPickerWorkerMain.ts'),
   preserveEntrySignatures: 'strict',
   treeshake: {
@@ -34,7 +34,7 @@ const options = {
   ],
 }
 
-export const bundleJs = async () => {
+export const bundleJs = async (): Promise<void> => {
   const input = await rollup(options)
   // @ts-ignore
   await input.write(options.output)
