@@ -2,10 +2,10 @@ import { createHash } from 'node:crypto'
 import { readdirSync } from 'node:fs'
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
-import { root } from './root.js'
+import { root } from './root.ts'
 
 const getPackageLocations = () => {
-  const packageLocations = []
+  const packageLocations: string[] = []
   const packagesFolder = join(root, 'packages')
   const dirents = readdirSync(packagesFolder)
   for (const dirent of dirents) {
