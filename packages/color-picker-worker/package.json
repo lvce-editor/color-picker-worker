@@ -46,7 +46,7 @@
     "@jest/globals": "^30.2.0",
     "@lvce-editor/constants": "^1.38.0",
     "@lvce-editor/rpc": "^4.20.0",
-    "@lvce-editor/rpc-registry": "^4.9.0",
+    "@lvce-editor/rpc-registry": "^5.0.0",
     "@lvce-editor/viewlet-registry": "^2.0.0",
     "@lvce-editor/virtual-dom-worker": "^4.0.0",
     "jest": "^30.2.0",
