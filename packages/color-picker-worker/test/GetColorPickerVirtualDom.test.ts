@@ -9,6 +9,7 @@ test('getColorPickerVirtualDom', () => {
       type: VirtualDomElements.Div,
       className: 'Viewlet ColorPicker',
       childCount: 2,
+      onContextMenu: 3,
     },
     {
       type: VirtualDomElements.Div,
