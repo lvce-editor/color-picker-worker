@@ -5,6 +5,6 @@ export default [
   ...config.default,
   ...actions.default,
   {
-    ignores: ['**/server/**', '**/e2e/**', '**/memory/**'],
+    ignores: ['**/server/**', '**/memory/**'],
   },
 ]
