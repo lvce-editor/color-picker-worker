@@ -6,9 +6,9 @@ import * as HandleSliderPointerUp from '../src/parts/HandleSliderPointerUp/Handl
 test('sets isPointerDown to false', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
+    color: 'hsl(180, 100%, 50%)',
     isPointerDown: true,
     offsetX: 50,
-    color: 'hsl(180, 100%, 50%)',
   }
   const result: ColorPickerState = HandleSliderPointerUp.handleSliderPointerUp(state)
   expect(result.isPointerDown).toBe(false)
@@ -17,11 +17,11 @@ test('sets isPointerDown to false', () => {
 test('preserves other state properties', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    isPointerDown: true,
-    offsetX: 75,
     color: 'hsl(270, 100%, 50%)',
-    min: 0,
+    isPointerDown: true,
     max: 100,
+    min: 0,
+    offsetX: 75,
   }
   const result: ColorPickerState = HandleSliderPointerUp.handleSliderPointerUp(state)
   expect(result.offsetX).toBe(75)
@@ -33,9 +33,9 @@ test('preserves other state properties', () => {
 test('works when isPointerDown is already false', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
+    color: 'hsl(90, 100%, 50%)',
     isPointerDown: false,
     offsetX: 25,
-    color: 'hsl(90, 100%, 50%)',
   }
   const result: ColorPickerState = HandleSliderPointerUp.handleSliderPointerUp(state)
   expect(result.isPointerDown).toBe(false)

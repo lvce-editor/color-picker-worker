@@ -6,8 +6,8 @@ import { setRelativeX } from '../src/parts/SetRelativeX/SetRelativeX.ts'
 test('setRelativeX updates color and offsetX correctly', () => {
   const state: ColorPickerState = {
     ...createDefaultState(),
-    min: 0,
     max: 100,
+    min: 0,
   }
   const relativeX = 50
   const result = setRelativeX(state, relativeX)
@@ -20,8 +20,8 @@ test('setRelativeX updates color and offsetX correctly', () => {
 test('setRelativeX clamps values within min and max bounds', () => {
   const state: ColorPickerState = {
     ...createDefaultState(),
-    min: 0,
     max: 100,
+    min: 0,
   }
   const tooLargeX = state.max + 100
   const tooSmallX = state.min - 100

@@ -6,30 +6,30 @@ test('getColorPickerVirtualDom', () => {
   const dom = GetColorPickerVirtualDom.getColorPickerVirtualDom()
   expect(dom).toEqual([
     {
-      type: VirtualDomElements.Div,
-      className: 'Viewlet ColorPicker',
       childCount: 2,
+      className: 'Viewlet ColorPicker',
       onContextMenu: 3,
+      type: VirtualDomElements.Div,
     },
     {
-      type: VirtualDomElements.Div,
-      className: 'ColorPickerRectangle',
       childCount: 3,
+      className: 'ColorPickerRectangle',
+      type: VirtualDomElements.Div,
     },
     {
-      type: VirtualDomElements.Div,
+      childCount: 0,
       className: 'ColorPickerBackgroundColor',
-      childCount: 0,
+      type: VirtualDomElements.Div,
     },
     {
-      type: VirtualDomElements.Div,
+      childCount: 0,
       className: 'ColorPickerLight',
-      childCount: 0,
+      type: VirtualDomElements.Div,
     },
     {
-      type: VirtualDomElements.Div,
-      className: 'ColorPickerDark',
       childCount: 0,
+      className: 'ColorPickerDark',
+      type: VirtualDomElements.Div,
     },
     {
       childCount: 2,
@@ -44,14 +44,14 @@ test('getColorPickerVirtualDom', () => {
       type: 4,
     },
     {
-      type: VirtualDomElements.Div,
-      className: 'ColorPickerSlider',
       childCount: 0,
+      className: 'ColorPickerSlider',
+      type: VirtualDomElements.Div,
     },
     {
-      type: VirtualDomElements.Div,
-      className: 'ColorPickerSliderThumb',
       childCount: 0,
+      className: 'ColorPickerSliderThumb',
+      type: VirtualDomElements.Div,
     },
   ])
 })

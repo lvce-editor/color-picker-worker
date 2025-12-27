@@ -7,17 +7,17 @@ export const loadContent = (state: ColorPickerState): ColorPickerState => {
   const initialOffsetX = 20
   const sliderThumbRadius = 12
   const color = GetNewColor.getNewColor(initialOffsetX, max)
-  const { x, y, width, height } = GetBounds.getBounds()
+  const { height, width, x, y } = GetBounds.getBounds()
   return {
     ...state,
-    offsetX: initialOffsetX,
     color,
+    height,
     max,
+    offsetX: initialOffsetX,
+    sliderThumbRadius,
+    version: 1,
+    width,
     x,
     y,
-    width,
-    height,
-    version: 1,
-    sliderThumbRadius,
   }
 }

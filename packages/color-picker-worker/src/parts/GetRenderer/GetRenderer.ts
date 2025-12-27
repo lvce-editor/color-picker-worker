@@ -8,14 +8,14 @@ import * as RenderUid from '../RenderUid/RenderUid.ts'
 
 export const getRenderer = (diffType: number): Renderer => {
   switch (diffType) {
-    case DiffType.RenderItems:
-      return RenderItems.renderItems
     case DiffType.RenderBounds:
       return RenderBounds.renderBounds
     case DiffType.RenderCss:
       return RenderCss.renderCss
     case DiffType.RenderEventListeners:
       return RenderEventListeners.renderEventListeners
+    case DiffType.RenderItems:
+      return RenderItems.renderItems
     case DiffType.RenderUid:
       return RenderUid.renderUid
     default:

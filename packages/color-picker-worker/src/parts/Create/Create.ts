@@ -3,19 +3,19 @@ import * as ColorPickerStates from '../ColorPickerStates/ColorPickerStates.ts'
 
 export const create = (uid: number, x: number, y: number, width: number, height: number, parentUid: number): ColorPickerState => {
   const state: ColorPickerState = {
-    uid,
     color: '',
     height,
+    isPointerDown: false,
     max: 0,
     min: 0,
     offsetX: 0,
+    parentUid,
+    sliderThumbRadius: 0,
+    uid,
+    version: 0,
     width,
     x,
     y,
-    version: 0,
-    parentUid,
-    isPointerDown: false,
-    sliderThumbRadius: 0,
   }
   ColorPickerStates.set(uid, state, state)
   return state

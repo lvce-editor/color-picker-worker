@@ -7,10 +7,10 @@ import * as GetColorPickerRectangleVirtualDom from '../GetColorPickerRectangleVi
 import * as MergeClassNames from '../MergeClassNames/MergeClassNames.ts'
 
 const parentNode: VirtualDomNode = {
-  type: VirtualDomElements.Div,
-  className: MergeClassNames.mergeClassNames(ClassNames.Viewlet, ClassNames.ColorPicker),
   childCount: 2,
+  className: MergeClassNames.mergeClassNames(ClassNames.Viewlet, ClassNames.ColorPicker),
   onContextMenu: DomEventListenerFunctions.HandleContextMenu,
+  type: VirtualDomElements.Div,
 }
 
 export const getColorPickerVirtualDom = (): readonly VirtualDomNode[] => {

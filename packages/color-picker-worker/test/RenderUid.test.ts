@@ -8,8 +8,8 @@ test('renderUid', () => {
   const oldState: ColorPickerState = CreateDefaultState.createDefaultState()
   const newState: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    uid: 1,
     parentUid: 2,
+    uid: 1,
   }
   const result = RenderUid.renderUid(oldState, newState)
   expect(result).toEqual([RenderMethod.SetUid, 1, 2])

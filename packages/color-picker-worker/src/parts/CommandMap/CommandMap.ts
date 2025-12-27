@@ -13,13 +13,13 @@ import * as Render2 from '../Render2/Render2.ts'
 export const commandMap = {
   'ColorPicker.create': Create.create,
   'ColorPicker.diff2': Diff2.diff2,
+  'ColorPicker.dispose': Dispose.dispose,
   'ColorPicker.getCommandIds': WrapCommand.getCommandIds,
+  'ColorPicker.handleContextMenu': WrapCommand.wrapCommand(handleContextMenu),
   'ColorPicker.handleSliderPointerDown': WrapCommand.wrapCommand(handleSliderPointerDown),
   'ColorPicker.handleSliderPointerMove': WrapCommand.wrapCommand(handleSliderPointerMove),
   'ColorPicker.handleSliderPointerUp': WrapCommand.wrapCommand(handleSliderPointerUp),
-  'ColorPicker.handleContextMenu': WrapCommand.wrapCommand(handleContextMenu),
   'ColorPicker.loadContent': WrapCommand.wrapCommand(ColorPicker.loadContent),
   'ColorPicker.render2': Render2.render2,
   'ColorPicker.terminate': terminate,
-  'ColorPicker.dispose': Dispose.dispose,
 }

@@ -14,13 +14,13 @@ test('render2 returns array of commands', () => {
   const mockOldState: ColorPickerState = CreateDefaultState.createDefaultState()
   const mockNewState: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    x: 15,
-    y: 25,
-    width: 110,
-    height: 60,
     color: 'hsl(180, 100%, 50%)',
+    height: 60,
     offsetX: 5,
     version: 2,
+    width: 110,
+    x: 15,
+    y: 25,
   }
 
   // Set up the states
@@ -42,13 +42,13 @@ test('render2 processes different diff results', () => {
   const mockOldState: ColorPickerState = CreateDefaultState.createDefaultState()
   const mockNewState: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    x: 15,
-    y: 25,
-    width: 110,
-    height: 60,
     color: 'hsl(180, 100%, 50%)',
+    height: 60,
     offsetX: 5,
     version: 2,
+    width: 110,
+    x: 15,
+    y: 25,
   }
 
   // Set up the states

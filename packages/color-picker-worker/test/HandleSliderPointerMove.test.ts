@@ -7,8 +7,8 @@ test('pointer move at start', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
     isPointerDown: true,
-    min: 0,
     max: 100,
+    min: 0,
   }
   const clientX: number = 0
   const offsetLeft: number = 0
@@ -21,8 +21,8 @@ test('pointer move at middle', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
     isPointerDown: true,
-    min: 0,
     max: 100,
+    min: 0,
   }
   const clientX: number = 50
   const offsetLeft: number = 0
@@ -35,8 +35,8 @@ test('pointer move at end', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
     isPointerDown: true,
-    min: 0,
     max: 100,
+    min: 0,
   }
   const clientX: number = 100
   const offsetLeft: number = 0
@@ -49,8 +49,8 @@ test('pointer move below min clamps to min', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
     isPointerDown: true,
-    min: 0,
     max: 100,
+    min: 0,
   }
   const clientX: number = -10
   const offsetLeft: number = 0
@@ -63,8 +63,8 @@ test('pointer move above max clamps to max', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
     isPointerDown: true,
-    min: 0,
     max: 100,
+    min: 0,
   }
   const clientX: number = 200
   const offsetLeft: number = 0
@@ -76,9 +76,9 @@ test('pointer move above max clamps to max', () => {
 test('returns state unchanged when isPointerDown is false', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
+    color: 'hsl(90, 100%, 50%)',
     isPointerDown: false,
     offsetX: 25,
-    color: 'hsl(90, 100%, 50%)',
   }
   const clientX: number = 50
   const offsetLeft: number = 0
