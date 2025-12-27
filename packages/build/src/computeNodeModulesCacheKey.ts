@@ -21,7 +21,7 @@ const locations = [
   '.github/workflows/pr.yml',
   '.github/workflows/ci.yml',
   '.github/workflows/release.yml',
-  'packages/build/src/computeNodeModulescacheKey.ts',
+  'packages/build/src/computeNodeModulesCacheKey.ts',
   'packages/server/src/postinstall.js',
 ]
 
