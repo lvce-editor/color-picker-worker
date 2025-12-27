@@ -30,8 +30,8 @@ test('isEqual with different offsetX and color', () => {
   const oldState = CreateDefaultState.createDefaultState()
   const newState: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    offsetX: 100,
     color: '#ff0000',
+    offsetX: 100,
   }
   expect(DiffCss.isEqual(oldState, newState)).toBe(false)
 })

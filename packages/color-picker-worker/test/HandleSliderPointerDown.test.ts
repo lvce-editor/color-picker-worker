@@ -6,8 +6,8 @@ import * as HandleSliderPointerDown from '../src/parts/HandleSliderPointerDown/H
 test('handleSliderPointerDown - within bounds', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    min: 0,
     max: 100,
+    min: 0,
   }
   const clientX: number = 100
   const offsetLeft: number = 0
@@ -19,8 +19,8 @@ test('handleSliderPointerDown - within bounds', () => {
 test('handleSliderPointerDown - below min', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    min: 0,
     max: 100,
+    min: 0,
   }
   const clientX: number = -100
   const offsetLeft: number = 0
@@ -32,8 +32,8 @@ test('handleSliderPointerDown - below min', () => {
 test('handleSliderPointerDown - above max', () => {
   const state: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    min: 0,
     max: 100,
+    min: 0,
   }
   const clientX: number = 1000
   const offsetLeft: number = 0

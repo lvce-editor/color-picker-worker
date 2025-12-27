@@ -8,8 +8,8 @@ test('renderCss - basic', () => {
   const oldState: ColorPickerState = CreateDefaultState.createDefaultState()
   const newState: ColorPickerState = {
     ...oldState,
-    offsetX: 100,
     color: '#ff0000',
+    offsetX: 100,
   }
   const result = RenderCss.renderCss(oldState, newState)
   expect(result).toEqual([RenderMethod.SetCss, 0, expect.any(String)])
@@ -19,9 +19,9 @@ test('renderCss - different uid', () => {
   const oldState: ColorPickerState = CreateDefaultState.createDefaultState()
   const newState: ColorPickerState = {
     ...oldState,
-    uid: 2,
-    offsetX: 100,
     color: '#ff0000',
+    offsetX: 100,
+    uid: 2,
   }
   const result = RenderCss.renderCss(oldState, newState)
   expect(result).toEqual([RenderMethod.SetCss, 2, expect.any(String)])

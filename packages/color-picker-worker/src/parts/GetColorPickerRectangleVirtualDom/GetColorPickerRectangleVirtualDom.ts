@@ -4,24 +4,24 @@ import * as ClassNames from '../ClassNames/ClassNames.ts'
 export const getColorPickerRectangleVirtualDom = (): readonly VirtualDomNode[] => {
   return [
     {
-      type: VirtualDomElements.Div,
-      className: ClassNames.ColorPickerRectangle,
       childCount: 3,
+      className: ClassNames.ColorPickerRectangle,
+      type: VirtualDomElements.Div,
     },
     {
-      type: VirtualDomElements.Div,
+      childCount: 0,
       className: ClassNames.ColorPickerBackgroundColor,
-      childCount: 0,
+      type: VirtualDomElements.Div,
     },
     {
-      type: VirtualDomElements.Div,
+      childCount: 0,
       className: ClassNames.ColorPickerLight,
-      childCount: 0,
+      type: VirtualDomElements.Div,
     },
     {
-      type: VirtualDomElements.Div,
-      className: ClassNames.ColorPickerDark,
       childCount: 0,
+      className: ClassNames.ColorPickerDark,
+      type: VirtualDomElements.Div,
     },
   ]
 }

@@ -4,9 +4,9 @@ import * as ClassNames from '../ClassNames/ClassNames.ts'
 export const getColorPickerSliderVirtualDom = (): readonly VirtualDomNode[] => {
   return [
     {
-      type: VirtualDomElements.Div,
-      className: ClassNames.ColorPickerSlider,
       childCount: 0,
+      className: ClassNames.ColorPickerSlider,
+      type: VirtualDomElements.Div,
     },
   ]
 }

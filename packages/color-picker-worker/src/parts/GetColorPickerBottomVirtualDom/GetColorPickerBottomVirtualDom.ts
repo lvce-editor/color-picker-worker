@@ -7,17 +7,17 @@ import { getColorPickerSliderVirtualDom } from '../GetColorPickerSliderVirtualDo
 export const getColorPickerBottomVirtualDom = (): readonly VirtualDomNode[] => {
   return [
     {
-      type: VirtualDomElements.Div,
-      className: 'ColorPickerBottom',
       childCount: 2,
+      className: 'ColorPickerBottom',
+      type: VirtualDomElements.Div,
     },
     {
-      type: VirtualDomElements.Div,
+      // TODO add ariavaluemin, ariavaluemax, ariavaluenow
+      childCount: 1,
       className: 'ColorPickerSliderWrapper',
       onPointerDown: DomEventListenerFunctions.HandleSliderPointerDown,
       role: 'slider',
-      // TODO add ariavaluemin, ariavaluemax, ariavaluenow
-      childCount: 1,
+      type: VirtualDomElements.Div,
     },
     ...getColorPickerSliderVirtualDom(),
     ...getColorPickerSliderThumbVirtualDom(),

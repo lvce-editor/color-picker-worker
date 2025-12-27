@@ -9,13 +9,13 @@ test('renderBounds returns correct array structure', () => {
   const oldState: ColorPickerState = CreateDefaultState.createDefaultState()
   const newState: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    x: 15,
-    y: 25,
-    width: 110,
-    height: 60,
     color: 'hsl(180, 100%, 50%)',
+    height: 60,
     offsetX: 5,
     version: 2,
+    width: 110,
+    x: 15,
+    y: 25,
   }
 
   // Act
@@ -36,13 +36,13 @@ test('renderBounds uses newState bounds values', () => {
   const oldState: ColorPickerState = CreateDefaultState.createDefaultState()
   const newState: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    x: 100,
-    y: 200,
-    width: 300,
-    height: 400,
     color: 'hsl(180, 100%, 50%)',
+    height: 400,
     offsetX: 5,
     version: 2,
+    width: 300,
+    x: 100,
+    y: 200,
   }
 
   // Act
@@ -60,20 +60,20 @@ test('renderBounds ignores oldState bounds values', () => {
   // Arrange
   const oldState: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
+    height: 999,
+    width: 999,
     x: 999,
     y: 999,
-    width: 999,
-    height: 999,
   }
   const newState: ColorPickerState = {
     ...CreateDefaultState.createDefaultState(),
-    x: 1,
-    y: 2,
-    width: 3,
-    height: 4,
     color: 'hsl(180, 100%, 50%)',
+    height: 4,
     offsetX: 5,
     version: 2,
+    width: 3,
+    x: 1,
+    y: 2,
   }
 
   // Act

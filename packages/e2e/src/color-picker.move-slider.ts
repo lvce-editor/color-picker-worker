@@ -4,7 +4,7 @@ export const name = 'color-picker.move-slider'
 
 export const skip = 1
 
-export const test: Test = async ({ FileSystem, Main, Editor, Locator, expect, Command }) => {
+export const test: Test = async ({ Command, Editor, expect, FileSystem, Locator, Main }) => {
   // arrange
   const tmpDir = await FileSystem.getTmpDir()
   await FileSystem.writeFile(`${tmpDir}/file.txt`, 'abc')
