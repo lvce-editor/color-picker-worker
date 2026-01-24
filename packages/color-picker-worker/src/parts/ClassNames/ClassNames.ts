@@ -1,5 +1,6 @@
 export const ColorPicker = 'ColorPicker'
 export const ColorPickerBackgroundColor = 'ColorPickerBackgroundColor'
+export const ColorPickerCloseButton = 'ColorPickerCloseButton'
 export const ColorPickerDark = 'ColorPickerDark'
 export const ColorPickerLight = 'ColorPickerLight'
 export const ColorPickerRectangle = 'ColorPickerRectangle'
