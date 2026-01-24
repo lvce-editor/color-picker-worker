@@ -3,6 +3,7 @@ import * as ColorPickerStates from '../ColorPickerStates/ColorPickerStates.ts'
 
 export const create = (uid: number, x: number, y: number, width: number, height: number, parentUid: number): ColorPickerState => {
   const state: ColorPickerState = {
+    closeButtonEnabled: false,
     color: '',
     height,
     isPointerDown: false,

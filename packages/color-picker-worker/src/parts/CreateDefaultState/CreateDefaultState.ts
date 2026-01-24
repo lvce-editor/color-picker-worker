@@ -2,6 +2,7 @@ import type { ColorPickerState } from '../ColorPickerState/ColorPickerState.ts'
 
 export const createDefaultState = (): ColorPickerState => {
   return {
+    closeButtonEnabled: false,
     color: '#000000',
     height: 0,
     isPointerDown: false,
