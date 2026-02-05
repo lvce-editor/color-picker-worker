@@ -22,7 +22,11 @@ const closeButtonNode: VirtualDomNode = {
 }
 
 export const getColorPickerVirtualDom = (state: ColorPickerState): readonly VirtualDomNode[] => {
-  const nodes: VirtualDomNode[] = [parentNode, ...GetColorPickerRectangleVirtualDom.getColorPickerRectangleVirtualDom(), ...getColorPickerBottomVirtualDom()]
+  const nodes: VirtualDomNode[] = [
+    parentNode,
+    ...GetColorPickerRectangleVirtualDom.getColorPickerRectangleVirtualDom(),
+    ...getColorPickerBottomVirtualDom(),
+  ]
   if (state.closeButtonEnabled) {
     nodes.push(closeButtonNode)
   }

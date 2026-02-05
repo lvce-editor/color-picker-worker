@@ -7,4 +7,9 @@ export default [
   {
     ignores: ['**/server/**', '**/memory/**'],
   },
+  {
+    rules: {
+      '@cspell/spellchecker': 'off',
+    },
+  },
 ]
