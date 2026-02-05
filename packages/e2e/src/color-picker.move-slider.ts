@@ -4,7 +4,7 @@ export const name = 'color-picker.move-slider'
 
 export const skip = 1
 
-export const test: Test = async ({ Command, Editor, expect, FileSystem, Locator, Main }) => {
+export const test: Test = async ({ ColorPicker, Editor, FileSystem, Main }) => {
   // arrange
   const tmpDir = await FileSystem.getTmpDir()
   await FileSystem.writeFile(`${tmpDir}/file.txt`, 'abc')
@@ -12,7 +12,7 @@ export const test: Test = async ({ Command, Editor, expect, FileSystem, Locator,
   await Editor.openColorPicker()
 
   // act
-  await Command.execute('ColorPicker.setRelativeX', 100)
+  await ColorPicker.setRelativeX(100)
 
   // assert
   // TODO

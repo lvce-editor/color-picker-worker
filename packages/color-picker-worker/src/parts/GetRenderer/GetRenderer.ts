@@ -1,6 +1,7 @@
 import type { Renderer } from '../Renderer/Renderer.ts'
 import * as DiffType from '../DiffType/DiffType.ts'
 import * as RenderBounds from '../RenderBounds/RenderBounds.ts'
+import * as RenderCloseButton from '../RenderCloseButton/RenderCloseButton.ts'
 import * as RenderCss from '../RenderCss/RenderCss.ts'
 import * as RenderEventListeners from '../RenderEventListeners/RenderEventListeners.ts'
 import * as RenderItems from '../RenderItems/RenderItems.ts'
@@ -10,6 +11,8 @@ export const getRenderer = (diffType: number): Renderer => {
   switch (diffType) {
     case DiffType.RenderBounds:
       return RenderBounds.renderBounds
+    case DiffType.RenderCloseButton:
+      return RenderCloseButton.renderCloseButton
     case DiffType.RenderCss:
       return RenderCss.renderCss
     case DiffType.RenderEventListeners:

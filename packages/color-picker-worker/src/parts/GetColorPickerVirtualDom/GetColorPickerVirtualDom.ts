@@ -1,5 +1,6 @@
 import type { VirtualDomNode } from '@lvce-editor/virtual-dom-worker'
 import { VirtualDomElements } from '@lvce-editor/virtual-dom-worker'
+import type { ColorPickerState } from '../ColorPickerState/ColorPickerState.ts'
 import * as ClassNames from '../ClassNames/ClassNames.ts'
 import * as DomEventListenerFunctions from '../DomEventListenerFunctions/DomEventListenerFunctions.ts'
 import { getColorPickerBottomVirtualDom } from '../GetColorPickerBottomVirtualDom/GetColorPickerBottomVirtualDom.ts'
@@ -13,6 +14,17 @@ const parentNode: VirtualDomNode = {
   type: VirtualDomElements.Div,
 }
 
-export const getColorPickerVirtualDom = (): readonly VirtualDomNode[] => {
-  return [parentNode, ...GetColorPickerRectangleVirtualDom.getColorPickerRectangleVirtualDom(), ...getColorPickerBottomVirtualDom()]
+const closeButtonNode: VirtualDomNode = {
+  childCount: 0,
+  className: ClassNames.ColorPickerCloseButton,
+  onClick: DomEventListenerFunctions.HandleCloseButton,
+  type: VirtualDomElements.Div,
+}
+
+export const getColorPickerVirtualDom = (state: ColorPickerState): readonly VirtualDomNode[] => {
+  const nodes: VirtualDomNode[] = [parentNode, ...GetColorPickerRectangleVirtualDom.getColorPickerRectangleVirtualDom(), ...getColorPickerBottomVirtualDom()]
+  if (state.closeButtonEnabled) {
+    nodes.push(closeButtonNode)
+  }
+  return nodes
 }
