@@ -1,9 +1,11 @@
 import { expect, test } from '@jest/globals'
 import { VirtualDomElements } from '@lvce-editor/virtual-dom-worker'
+import * as CreateDefaultState from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
 import * as GetColorPickerVirtualDom from '../src/parts/GetColorPickerVirtualDom/GetColorPickerVirtualDom.ts'
 
 test('getColorPickerVirtualDom', () => {
-  const dom = GetColorPickerVirtualDom.getColorPickerVirtualDom()
+  const state = CreateDefaultState.createDefaultState()
+  const dom = GetColorPickerVirtualDom.getColorPickerVirtualDom(state)
   expect(dom).toEqual([
     {
       childCount: 2,

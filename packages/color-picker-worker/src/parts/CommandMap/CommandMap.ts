@@ -3,6 +3,7 @@ import * as WrapCommand from '../ColorPickerStates/ColorPickerStates.ts'
 import * as Create from '../Create/Create.ts'
 import * as Diff2 from '../Diff2/Diff2.ts'
 import * as Dispose from '../Dispose/Dispose.ts'
+import { handleCloseButton } from '../HandleCloseButton/HandleCloseButton.ts'
 import { handleContextMenu } from '../HandleContextMenu/HandleContextMenu.ts'
 import { handleSliderPointerDown } from '../HandleSliderPointerDown/HandleSliderPointerDown.ts'
 import { handleSliderPointerMove } from '../HandleSliderPointerMove/HandleSliderPointerMove.ts'
@@ -15,6 +16,7 @@ export const commandMap = {
   'ColorPicker.diff2': Diff2.diff2,
   'ColorPicker.dispose': Dispose.dispose,
   'ColorPicker.getCommandIds': WrapCommand.getCommandIds,
+  'ColorPicker.handleCloseButton': handleCloseButton,
   'ColorPicker.handleContextMenu': WrapCommand.wrapCommand(handleContextMenu),
   'ColorPicker.handleSliderPointerDown': WrapCommand.wrapCommand(handleSliderPointerDown),
   'ColorPicker.handleSliderPointerMove': WrapCommand.wrapCommand(handleSliderPointerMove),
