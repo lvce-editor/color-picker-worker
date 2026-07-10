@@ -9,6 +9,5 @@ test('applyRender applies render correctly', () => {
   const state: ColorPickerState = CreateDefaultState.createDefaultState()
   const diffResult: number[] = [DiffType.RenderItems, DiffType.RenderBounds]
   const result = ApplyRender.applyRender(render, state, diffResult)
-  expect(result).toBeDefined()
-  expect(result.length).toBe(2)
+  expect(result).toHaveLength(2)
 })
