@@ -29,7 +29,7 @@ const remoteUrl = getRemoteUrl(workerPath)
 const occurrence = `// const colorPickerWorkerUrl = \`\${assetDir}/packages/color-picker-worker/dist/colorPickerWorkerMain.js\`
 const colorPickerWorkerUrl = \`${remoteUrl}\``
 const replacement = `const colorPickerWorkerUrl = \`\${assetDir}/packages/color-picker-worker/dist/colorPickerWorkerMain.js\``
-if (!content.includes(occurrence)) {
+if (!content.includes(occurrence) && !content.includes(replacement)) {
   throw new Error('occurrence not found')
 }
 const newContent = content.replace(occurrence, replacement)
