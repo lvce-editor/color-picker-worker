@@ -4,6 +4,7 @@ import * as GetRenderer from '../src/parts/GetRenderer/GetRenderer.ts'
 import * as RenderBounds from '../src/parts/RenderBounds/RenderBounds.ts'
 import * as RenderCss from '../src/parts/RenderCss/RenderCss.ts'
 import * as RenderEventListeners from '../src/parts/RenderEventListeners/RenderEventListeners.ts'
+import * as RenderFocus from '../src/parts/RenderFocus/RenderFocus.ts'
 import * as RenderItems from '../src/parts/RenderItems/RenderItems.ts'
 import * as RenderUid from '../src/parts/RenderUid/RenderUid.ts'
 
@@ -29,6 +30,12 @@ test('getRenderer with RenderEventListeners', () => {
   const diffType: number = DiffType.RenderEventListeners
   const renderer = GetRenderer.getRenderer(diffType)
   expect(renderer).toBe(RenderEventListeners.renderEventListeners)
+})
+
+test('getRenderer with RenderFocus', () => {
+  const diffType: number = DiffType.RenderFocus
+  const renderer = GetRenderer.getRenderer(diffType)
+  expect(renderer).toBe(RenderFocus.renderFocus)
 })
 
 test('getRenderer with RenderUid', () => {

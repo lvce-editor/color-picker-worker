@@ -4,6 +4,7 @@ import * as RenderBounds from '../RenderBounds/RenderBounds.ts'
 import * as RenderCloseButton from '../RenderCloseButton/RenderCloseButton.ts'
 import * as RenderCss from '../RenderCss/RenderCss.ts'
 import * as RenderEventListeners from '../RenderEventListeners/RenderEventListeners.ts'
+import * as RenderFocus from '../RenderFocus/RenderFocus.ts'
 import * as RenderItems from '../RenderItems/RenderItems.ts'
 import * as RenderUid from '../RenderUid/RenderUid.ts'
 
@@ -17,6 +18,8 @@ export const getRenderer = (diffType: number): Renderer => {
       return RenderCss.renderCss
     case DiffType.RenderEventListeners:
       return RenderEventListeners.renderEventListeners
+    case DiffType.RenderFocus:
+      return RenderFocus.renderFocus
     case DiffType.RenderItems:
       return RenderItems.renderItems
     case DiffType.RenderUid:

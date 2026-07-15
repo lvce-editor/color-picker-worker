@@ -11,6 +11,7 @@ export const loadContent = (state: ColorPickerState): ColorPickerState => {
   return {
     ...state,
     color,
+    focused: true,
     height,
     max,
     offsetX: initialOffsetX,

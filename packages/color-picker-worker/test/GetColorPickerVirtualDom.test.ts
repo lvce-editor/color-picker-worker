@@ -43,6 +43,7 @@ test('getColorPickerVirtualDom', () => {
       className: 'ColorPickerSliderWrapper',
       onPointerDown: 1,
       role: 'slider',
+      tabIndex: 0,
       type: 4,
     },
     {

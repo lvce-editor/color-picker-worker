@@ -3,6 +3,7 @@ import type { Rectangle } from '../Rectangle/Rectangle.ts'
 export interface ColorPickerState extends Rectangle {
   readonly closeButtonEnabled: boolean
   readonly color: string
+  readonly focused: boolean
   readonly isPointerDown: boolean
   readonly max: number
   readonly min: number
