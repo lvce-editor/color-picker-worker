@@ -7,7 +7,5 @@ test('diff returns expected result', () => {
   const oldState: ColorPickerState = CreateDefaultState.createDefaultState()
   const newState: ColorPickerState = CreateDefaultState.createDefaultState()
   const result = Diff.diff(oldState, newState)
-  expect(result).toEqual([
-    /* expected diff result */
-  ])
+  expect(result).toEqual([/* expected diff result */])
 })
