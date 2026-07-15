@@ -4,6 +4,7 @@ export const createDefaultState = (): ColorPickerState => {
   return {
     closeButtonEnabled: false,
     color: '#000000',
+    focused: false,
     height: 0,
     isPointerDown: false,
     max: 0,

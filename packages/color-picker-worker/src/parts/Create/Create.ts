@@ -5,6 +5,7 @@ export const create = (uid: number, x: number, y: number, width: number, height:
   const state: ColorPickerState = {
     closeButtonEnabled: false,
     color: '',
+    focused: false,
     height,
     isPointerDown: false,
     max: 0,

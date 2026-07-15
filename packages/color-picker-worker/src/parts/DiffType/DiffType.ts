@@ -4,3 +4,4 @@ export const RenderCss = 10
 export const RenderEventListeners = 11
 export const RenderUid = 12
 export const RenderCloseButton = 13
+export const RenderFocus = 14

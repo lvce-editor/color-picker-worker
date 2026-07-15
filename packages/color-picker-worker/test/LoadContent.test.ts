@@ -9,6 +9,7 @@ test('loadContent - basic', () => {
   expect(result.offsetX).toBe(20)
   expect(result.max).toBe(300)
   expect(result.color).toBeDefined()
+  expect(result.focused).toBe(true)
   expect(result.version).toBe(1)
   expect(result.x).toBeDefined()
   expect(result.y).toBeDefined()
