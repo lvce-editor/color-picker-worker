@@ -7,23 +7,22 @@ import { getColorPickerSliderThumbVirtualDom } from '../GetColorPickerSliderThum
 import { getColorPickerSliderVirtualDom } from '../GetColorPickerSliderVirtualDom/GetColorPickerSliderVirtualDom.ts'
 import * as TabIndex from '../TabIndex/TabIndex.ts'
 
+const colorPickerBottomNode: VirtualDomNode = {
+  childCount: 2,
+  className: 'ColorPickerBottom',
+  type: VirtualDomElements.Div,
+}
+
+const colorPickerSliderWrapperNode: VirtualDomNode = {
+  // TODO add ariavaluemin, ariavaluemax, ariavaluenow
+  childCount: 1,
+  className: ClassNames.ColorPickerSliderWrapper,
+  onPointerDown: DomEventListenerFunctions.HandleSliderPointerDown,
+  role: AriaRoles.Slider,
+  tabIndex: TabIndex.Focusable,
+  type: VirtualDomElements.Div,
+}
+
 export const getColorPickerBottomVirtualDom = (): readonly VirtualDomNode[] => {
-  return [
-    {
-      childCount: 2,
-      className: 'ColorPickerBottom',
-      type: VirtualDomElements.Div,
-    },
-    {
-      // TODO add ariavaluemin, ariavaluemax, ariavaluenow
-      childCount: 1,
-      className: ClassNames.ColorPickerSliderWrapper,
-      onPointerDown: DomEventListenerFunctions.HandleSliderPointerDown,
-      role: AriaRoles.Slider,
-      tabIndex: TabIndex.Focusable,
-      type: VirtualDomElements.Div,
-    },
-    ...getColorPickerSliderVirtualDom(),
-    ...getColorPickerSliderThumbVirtualDom(),
-  ]
+  return [colorPickerBottomNode, colorPickerSliderWrapperNode, ...getColorPickerSliderVirtualDom(), ...getColorPickerSliderThumbVirtualDom()]
 }
