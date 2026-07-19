@@ -1,9 +1,11 @@
 import type { VirtualDomNode } from '@lvce-editor/virtual-dom-worker'
 import { VirtualDomElements } from '@lvce-editor/virtual-dom-worker'
+import * as AriaRoles from '../AriaRoles/AriaRoles.ts'
 import * as ClassNames from '../ClassNames/ClassNames.ts'
 import * as DomEventListenerFunctions from '../DomEventListenerFunctions/DomEventListenerFunctions.ts'
 import { getColorPickerSliderThumbVirtualDom } from '../GetColorPickerSliderThumbVirtualDom/GetColorPickerSliderThumbVirtualDom.ts'
 import { getColorPickerSliderVirtualDom } from '../GetColorPickerSliderVirtualDom/GetColorPickerSliderVirtualDom.ts'
+import * as TabIndex from '../TabIndex/TabIndex.ts'
 
 export const getColorPickerBottomVirtualDom = (): readonly VirtualDomNode[] => {
   return [
@@ -17,8 +19,8 @@ export const getColorPickerBottomVirtualDom = (): readonly VirtualDomNode[] => {
       childCount: 1,
       className: ClassNames.ColorPickerSliderWrapper,
       onPointerDown: DomEventListenerFunctions.HandleSliderPointerDown,
-      role: 'slider',
-      tabIndex: 0,
+      role: AriaRoles.Slider,
+      tabIndex: TabIndex.Focusable,
       type: VirtualDomElements.Div,
     },
     ...getColorPickerSliderVirtualDom(),
