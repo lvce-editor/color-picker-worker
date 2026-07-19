@@ -23,8 +23,9 @@ test('setRelativeX clamps values within min and max bounds', () => {
     max: 100,
     min: 0,
   }
-  const tooLargeX = state.max + 100
-  const tooSmallX = state.min - 100
+  const { max, min } = state
+  const tooLargeX = max + 100
+  const tooSmallX = min - 100
 
   const resultLarge = setRelativeX(state, tooLargeX)
   const resultSmall = setRelativeX(state, tooSmallX)

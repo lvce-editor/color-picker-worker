@@ -1,7 +1,9 @@
 import { expect, test } from '@jest/globals'
 import { VirtualDomElements } from '@lvce-editor/virtual-dom-worker'
+import * as AriaRoles from '../src/parts/AriaRoles/AriaRoles.ts'
 import * as CreateDefaultState from '../src/parts/CreateDefaultState/CreateDefaultState.ts'
 import * as GetColorPickerVirtualDom from '../src/parts/GetColorPickerVirtualDom/GetColorPickerVirtualDom.ts'
+import * as TabIndex from '../src/parts/TabIndex/TabIndex.ts'
 
 test('getColorPickerVirtualDom', () => {
   const state = CreateDefaultState.createDefaultState()
@@ -36,15 +38,15 @@ test('getColorPickerVirtualDom', () => {
     {
       childCount: 2,
       className: 'ColorPickerBottom',
-      type: 4,
+      type: VirtualDomElements.Div,
     },
     {
       childCount: 1,
       className: 'ColorPickerSliderWrapper',
       onPointerDown: 1,
-      role: 'slider',
-      tabIndex: 0,
-      type: 4,
+      role: AriaRoles.Slider,
+      tabIndex: TabIndex.Focusable,
+      type: VirtualDomElements.Div,
     },
     {
       childCount: 0,
