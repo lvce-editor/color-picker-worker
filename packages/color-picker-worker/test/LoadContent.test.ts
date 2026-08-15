@@ -40,3 +40,32 @@ test('loadContent preserves bounds supplied by the editor', () => {
     y: 240,
   })
 })
+
+test('loadContent initializes from the selected color', () => {
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    height: 200,
+    width: 300,
+  }
+  const result: ColorPickerState = LoadContent.loadContent(state, 'hsl(240, 100%, 50%)')
+  expect(result).toMatchObject({
+    colorAreaOffsetX: 300,
+    colorAreaOffsetY: 0,
+    hue: 240,
+    offsetX: 188,
+    saturation: 1,
+    selectedColor: '#0000ff',
+    value: 1,
+  })
+})
+
+test('loadContent uses a fresh default for an invalid color', () => {
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    hue: 240,
+    selectedColor: '#0000ff',
+  }
+  const result: ColorPickerState = LoadContent.loadContent(state, 'invalid')
+  expect(result.hue).toBe(24)
+  expect(result.selectedColor).toBe('#ff6600')
+})
