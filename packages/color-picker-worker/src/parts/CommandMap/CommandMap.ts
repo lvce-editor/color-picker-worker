@@ -8,6 +8,7 @@ import { handleColorAreaPointerDown } from '../HandleColorAreaPointerDown/Handle
 import { handleColorAreaPointerMove } from '../HandleColorAreaPointerMove/HandleColorAreaPointerMove.ts'
 import { handleColorAreaPointerUp } from '../HandleColorAreaPointerUp/HandleColorAreaPointerUp.ts'
 import { handleContextMenu } from '../HandleContextMenu/HandleContextMenu.ts'
+import { handleSliderKeyDown } from '../HandleSliderKeyDown/HandleSliderKeyDown.ts'
 import { handleSliderPointerDown } from '../HandleSliderPointerDown/HandleSliderPointerDown.ts'
 import { handleSliderPointerMove } from '../HandleSliderPointerMove/HandleSliderPointerMove.ts'
 import { handleSliderPointerUp } from '../HandleSliderPointerUp/HandleSliderPointerUp.ts'
@@ -25,6 +26,7 @@ export const commandMap = {
   'ColorPicker.handleColorAreaPointerMove': WrapCommand.wrapCommand(WithEditorColorUpdate.withEditorColorUpdate(handleColorAreaPointerMove)),
   'ColorPicker.handleColorAreaPointerUp': WrapCommand.wrapCommand(handleColorAreaPointerUp),
   'ColorPicker.handleContextMenu': WrapCommand.wrapCommand(handleContextMenu),
+  'ColorPicker.handleSliderKeyDown': WrapCommand.wrapCommand(WithEditorColorUpdate.withEditorColorUpdate(handleSliderKeyDown)),
   'ColorPicker.handleSliderPointerDown': WrapCommand.wrapCommand(WithEditorColorUpdate.withEditorColorUpdate(handleSliderPointerDown)),
   'ColorPicker.handleSliderPointerMove': WrapCommand.wrapCommand(WithEditorColorUpdate.withEditorColorUpdate(handleSliderPointerMove)),
   'ColorPicker.handleSliderPointerUp': WrapCommand.wrapCommand(handleSliderPointerUp),

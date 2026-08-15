@@ -38,6 +38,10 @@ test('getEventListeners returns correct event listeners for ColorPicker', () => 
         name: DomEventListenerFunctions.HandleColorAreaPointerUp,
         params: ['executeWidgetCommand', 'ColorPicker', 'ColorPicker.handleColorAreaPointerUp', uid, WidgetId.ColorPicker],
       },
+      {
+        name: DomEventListenerFunctions.HandleSliderKeyDown,
+        params: ['executeWidgetCommand', 'ColorPicker', 'ColorPicker.handleSliderKeyDown', uid, WidgetId.ColorPicker, EventExpression.Key],
+      },
     ]),
   )
   expect(new Set(result.map(({ name }) => name)).size).toBe(result.length)
