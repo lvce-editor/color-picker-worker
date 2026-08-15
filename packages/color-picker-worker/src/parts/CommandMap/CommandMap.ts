@@ -13,6 +13,7 @@ import { handleSliderPointerMove } from '../HandleSliderPointerMove/HandleSlider
 import { handleSliderPointerUp } from '../HandleSliderPointerUp/HandleSliderPointerUp.ts'
 import * as ColorPicker from '../LoadContent/LoadContent.ts'
 import * as Render2 from '../Render2/Render2.ts'
+import * as WithEditorColorUpdate from '../WithEditorColorUpdate/WithEditorColorUpdate.ts'
 
 export const commandMap = {
   'ColorPicker.create': Create.create,
@@ -20,12 +21,12 @@ export const commandMap = {
   'ColorPicker.dispose': Dispose.dispose,
   'ColorPicker.getCommandIds': WrapCommand.getCommandIds,
   'ColorPicker.handleCloseButton': handleCloseButton,
-  'ColorPicker.handleColorAreaPointerDown': WrapCommand.wrapCommand(handleColorAreaPointerDown),
-  'ColorPicker.handleColorAreaPointerMove': WrapCommand.wrapCommand(handleColorAreaPointerMove),
+  'ColorPicker.handleColorAreaPointerDown': WrapCommand.wrapCommand(WithEditorColorUpdate.withEditorColorUpdate(handleColorAreaPointerDown)),
+  'ColorPicker.handleColorAreaPointerMove': WrapCommand.wrapCommand(WithEditorColorUpdate.withEditorColorUpdate(handleColorAreaPointerMove)),
   'ColorPicker.handleColorAreaPointerUp': WrapCommand.wrapCommand(handleColorAreaPointerUp),
   'ColorPicker.handleContextMenu': WrapCommand.wrapCommand(handleContextMenu),
-  'ColorPicker.handleSliderPointerDown': WrapCommand.wrapCommand(handleSliderPointerDown),
-  'ColorPicker.handleSliderPointerMove': WrapCommand.wrapCommand(handleSliderPointerMove),
+  'ColorPicker.handleSliderPointerDown': WrapCommand.wrapCommand(WithEditorColorUpdate.withEditorColorUpdate(handleSliderPointerDown)),
+  'ColorPicker.handleSliderPointerMove': WrapCommand.wrapCommand(WithEditorColorUpdate.withEditorColorUpdate(handleSliderPointerMove)),
   'ColorPicker.handleSliderPointerUp': WrapCommand.wrapCommand(handleSliderPointerUp),
   'ColorPicker.loadContent': WrapCommand.wrapCommand(ColorPicker.loadContent),
   'ColorPicker.render2': Render2.render2,

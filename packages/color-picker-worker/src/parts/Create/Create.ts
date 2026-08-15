@@ -10,6 +10,7 @@ export const create = (uid: number, x: number, y: number, width: number, height:
     colorAreaOffsetY: 0,
     focused: false,
     height,
+    hue: 0,
     isColorAreaPointerDown: false,
     isPointerDown: false,
     max: 0,
@@ -17,6 +18,7 @@ export const create = (uid: number, x: number, y: number, width: number, height:
     offsetX: 0,
     parentUid,
     saturation: 0,
+    selectedColor: '#000000',
     sliderThumbRadius: 0,
     uid,
     value: 0,
@@ -25,6 +27,13 @@ export const create = (uid: number, x: number, y: number, width: number, height:
     x,
     y,
   }
-  ColorPickerStates.set(uid, state, state)
+  const oldState = {
+    ...state,
+    height: 0,
+    width: 0,
+    x: 0,
+    y: 0,
+  }
+  ColorPickerStates.set(uid, oldState, state)
   return state
 }

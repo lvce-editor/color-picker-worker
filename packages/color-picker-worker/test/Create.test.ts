@@ -1,5 +1,6 @@
 import { expect, test } from '@jest/globals'
 import type { ColorPickerState } from '../src/parts/ColorPickerState/ColorPickerState.ts'
+import * as ColorPickerStates from '../src/parts/ColorPickerStates/ColorPickerStates.ts'
 import * as Create from '../src/parts/Create/Create.ts'
 
 test('create - basic', () => {
@@ -11,4 +12,8 @@ test('create - basic', () => {
   const parentUid: number = 0
   const state: ColorPickerState = Create.create(uid, x, y, width, height, parentUid)
   expect(state).toBeDefined()
+  expect(ColorPickerStates.get(uid)).toMatchObject({
+    newState: { height, width, x, y },
+    oldState: { height: 0, width: 0, x: 0, y: 0 },
+  })
 })
