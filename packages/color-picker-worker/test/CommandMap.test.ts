@@ -7,6 +7,7 @@ test('commandMap', () => {
       'ColorPicker.handleColorAreaPointerDown': expect.any(Function),
       'ColorPicker.handleColorAreaPointerMove': expect.any(Function),
       'ColorPicker.handleColorAreaPointerUp': expect.any(Function),
+      'ColorPicker.handleSliderKeyDown': expect.any(Function),
     }),
   )
 })

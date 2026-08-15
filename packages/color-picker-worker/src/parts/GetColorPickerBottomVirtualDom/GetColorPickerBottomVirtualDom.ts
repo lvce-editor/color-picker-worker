@@ -17,6 +17,7 @@ const colorPickerSliderWrapperNode: VirtualDomNode = {
   // TODO add ariavaluemin, ariavaluemax, ariavaluenow
   childCount: 1,
   className: ClassNames.ColorPickerSliderWrapper,
+  onKeyDown: DomEventListenerFunctions.HandleSliderKeyDown,
   onPointerDown: DomEventListenerFunctions.HandleSliderPointerDown,
   role: AriaRoles.Slider,
   tabIndex: TabIndex.Focusable,

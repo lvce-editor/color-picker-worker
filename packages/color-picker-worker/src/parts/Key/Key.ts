@@ -1,0 +1,8 @@
+export const ArrowDown = 'ArrowDown'
+export const ArrowLeft = 'ArrowLeft'
+export const ArrowRight = 'ArrowRight'
+export const ArrowUp = 'ArrowUp'
+export const End = 'End'
+export const Home = 'Home'
+export const PageDown = 'PageDown'
+export const PageUp = 'PageUp'

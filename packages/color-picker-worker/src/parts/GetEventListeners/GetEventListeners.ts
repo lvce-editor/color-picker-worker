@@ -64,6 +64,10 @@ export const getEventListeners = (uid: number, widgetId: number): readonly DomEv
       params: ['executeWidgetCommand', 'ColorPicker', 'ColorPicker.handleSliderPointerUp', uid, widgetId],
     },
     {
+      name: DomEventListenerFunctions.HandleSliderKeyDown,
+      params: ['executeWidgetCommand', 'ColorPicker', 'ColorPicker.handleSliderKeyDown', uid, widgetId, EventExpression.Key],
+    },
+    {
       name: DomEventListenerFunctions.HandleContextMenu,
       params: ['executeWidgetCommand', 'ColorPicker', 'ColorPicker.handleContextMenu', uid, widgetId],
     },
