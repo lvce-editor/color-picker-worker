@@ -40,4 +40,5 @@ test('getEventListeners returns correct event listeners for ColorPicker', () => 
       },
     ]),
   )
+  expect(new Set(result.map(({ name }) => name)).size).toBe(result.length)
 })

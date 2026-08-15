@@ -18,6 +18,7 @@ test('sets saturation and value from a point in the color area', () => {
     colorAreaOffsetX: 150,
     colorAreaOffsetY: 75,
     saturation: 0.5,
+    selectedColor: '#804040',
     value: 0.5,
   })
 })

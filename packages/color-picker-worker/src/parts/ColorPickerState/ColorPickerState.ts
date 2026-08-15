@@ -7,6 +7,7 @@ export interface ColorPickerState extends Rectangle {
   readonly colorAreaOffsetX: number
   readonly colorAreaOffsetY: number
   readonly focused: boolean
+  readonly hue: number
   readonly isColorAreaPointerDown: boolean
   readonly isPointerDown: boolean
   readonly max: number
@@ -14,6 +15,7 @@ export interface ColorPickerState extends Rectangle {
   readonly offsetX: number
   readonly parentUid: number
   readonly saturation: number
+  readonly selectedColor: string
   readonly sliderThumbRadius: number
   readonly uid: number
   readonly value: number

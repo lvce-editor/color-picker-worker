@@ -8,12 +8,16 @@ test('setRelativeX updates color and offsetX correctly', () => {
     ...createDefaultState(),
     max: 100,
     min: 0,
+    saturation: 1,
+    value: 1,
   }
   const relativeX = 50
   const result = setRelativeX(state, relativeX)
 
   expect(result.color).toBeDefined()
+  expect(result.hue).toBe(180)
   expect(result.offsetX).toBe(38)
+  expect(result.selectedColor).toBe('#00ffff')
   expect(result).not.toBe(state)
 })
 
