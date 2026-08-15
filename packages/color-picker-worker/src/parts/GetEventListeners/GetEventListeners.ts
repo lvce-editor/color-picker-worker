@@ -6,6 +6,35 @@ export const getEventListeners = (uid: number, widgetId: number): readonly DomEv
   // TODO uncomplicate event listeners
   return [
     {
+      name: DomEventListenerFunctions.HandleColorAreaPointerDown,
+      params: [
+        'executeWidgetCommand',
+        'ColorPicker',
+        'ColorPicker.handleColorAreaPointerDown',
+        uid,
+        widgetId,
+        EventExpression.ClientX,
+        EventExpression.ClientY,
+      ],
+      trackPointerEvents: [DomEventListenerFunctions.HandleColorAreaPointerMove, DomEventListenerFunctions.HandleColorAreaPointerUp],
+    },
+    {
+      name: DomEventListenerFunctions.HandleColorAreaPointerMove,
+      params: [
+        'executeWidgetCommand',
+        'ColorPicker',
+        'ColorPicker.handleColorAreaPointerMove',
+        uid,
+        widgetId,
+        EventExpression.ClientX,
+        EventExpression.ClientY,
+      ],
+    },
+    {
+      name: DomEventListenerFunctions.HandleColorAreaPointerUp,
+      params: ['executeWidgetCommand', 'ColorPicker', 'ColorPicker.handleColorAreaPointerUp', uid, widgetId],
+    },
+    {
       name: DomEventListenerFunctions.HandleSliderPointerDown,
       params: [
         'executeWidgetCommand',

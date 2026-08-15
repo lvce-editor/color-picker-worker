@@ -1,10 +1,12 @@
 import type { VirtualDomNode } from '@lvce-editor/virtual-dom-worker'
 import { VirtualDomElements } from '@lvce-editor/virtual-dom-worker'
 import * as ClassNames from '../ClassNames/ClassNames.ts'
+import * as DomEventListenerFunctions from '../DomEventListenerFunctions/DomEventListenerFunctions.ts'
 
 const colorPickerRectangleNode: VirtualDomNode = {
-  childCount: 3,
+  childCount: 4,
   className: ClassNames.ColorPickerRectangle,
+  onPointerDown: DomEventListenerFunctions.HandleColorAreaPointerDown,
   type: VirtualDomElements.Div,
 }
 
@@ -26,6 +28,12 @@ const colorPickerDarkNode: VirtualDomNode = {
   type: VirtualDomElements.Div,
 }
 
+const colorPickerSelectionThumbNode: VirtualDomNode = {
+  childCount: 0,
+  className: ClassNames.ColorPickerSelectionThumb,
+  type: VirtualDomElements.Div,
+}
+
 export const getColorPickerRectangleVirtualDom = (): readonly VirtualDomNode[] => {
-  return [colorPickerRectangleNode, colorPickerBackgroundColorNode, colorPickerLightNode, colorPickerDarkNode]
+  return [colorPickerRectangleNode, colorPickerBackgroundColorNode, colorPickerLightNode, colorPickerDarkNode, colorPickerSelectionThumbNode]
 }

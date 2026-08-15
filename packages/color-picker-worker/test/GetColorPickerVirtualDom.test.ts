@@ -17,8 +17,9 @@ test('getColorPickerVirtualDom', () => {
       type: VirtualDomElements.Div,
     },
     {
-      childCount: 3,
+      childCount: 4,
       className: 'ColorPickerRectangle',
+      onPointerDown: DomEventListenerFunctions.HandleColorAreaPointerDown,
       type: VirtualDomElements.Div,
     },
     {
@@ -34,6 +35,11 @@ test('getColorPickerVirtualDom', () => {
     {
       childCount: 0,
       className: 'ColorPickerDark',
+      type: VirtualDomElements.Div,
+    },
+    {
+      childCount: 0,
+      className: 'ColorPickerSelectionThumb',
       type: VirtualDomElements.Div,
     },
     {
