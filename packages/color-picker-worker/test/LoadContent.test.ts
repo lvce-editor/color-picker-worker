@@ -16,3 +16,20 @@ test('loadContent - basic', () => {
   expect(result.width).toBeDefined()
   expect(result.height).toBeDefined()
 })
+
+test('loadContent preserves bounds supplied by the editor', () => {
+  const state: ColorPickerState = {
+    ...CreateDefaultState.createDefaultState(),
+    height: 200,
+    width: 300,
+    x: 120,
+    y: 240,
+  }
+  const result: ColorPickerState = LoadContent.loadContent(state)
+  expect(result).toMatchObject({
+    height: 200,
+    width: 300,
+    x: 120,
+    y: 240,
+  })
+})
