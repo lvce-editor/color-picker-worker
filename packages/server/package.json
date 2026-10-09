@@ -15,6 +15,6 @@
     "@types/node": "^22.10.2"
   },
   "dependencies": {
-    "@lvce-editor/server": "^0.121.11"
+    "@lvce-editor/server": "^0.121.13"
   }
 }
