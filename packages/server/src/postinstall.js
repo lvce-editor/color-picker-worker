@@ -1,6 +1,7 @@
 import { readFile, readdir, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
+import { replaceColorPickerWorkerUrl } from './replaceColorPickerWorkerUrl.js'
 
 const __dirname = import.meta.dirname
 
@@ -28,11 +29,5 @@ const rendererWorkerMainPath = join(serverStaticPath, commitHash, 'packages', 'r
 const content = await readFile(rendererWorkerMainPath, 'utf-8')
 
 const remoteUrl = getRemoteUrl(workerPath)
-if (!content.includes('// const colorPickerWorkerUrl = ')) {
-  const occurrence = `const colorPickerWorkerUrl = \`\${assetDir}/packages/color-picker-worker/dist/colorPickerWorkerMain.js\``
-  const replacement = `// const colorPickerWorkerUrl = \`\${assetDir}/packages/color-picker-worker/dist/colorPickerWorkerMain.js\`
-const colorPickerWorkerUrl = \`${remoteUrl}\``
-
-  const newContent = content.replace(occurrence, replacement)
-  await writeFile(rendererWorkerMainPath, newContent)
-}
+const newContent = replaceColorPickerWorkerUrl(content, JSON.stringify(remoteUrl))
+await writeFile(rendererWorkerMainPath, newContent)
